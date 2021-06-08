@@ -1,0 +1,12 @@
+wordpress:
+    image: wordpress:latest
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      WORDPRESS_DB_HOST: database.winterfoxit.com.br:3306
+      WORDPRESS_DB_USER: dbadmin
+      WORDPRESS_DB_PASSWORD: minhasenhadobdwordpress0102
+      WORDPRESS_DB_NAME: dbwordpress0305
+    volumes:
+      ["./:/var/www/html"]
